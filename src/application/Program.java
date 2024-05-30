@@ -45,10 +45,13 @@ public class Program {
 		
 		System.out.println();
 		System.out.println("TAXES PAID:");
+		for (TaxPayer tp : persons) {
+			System.out.println(tp);
+		}
+		
 		double sum = 0.0;
-		for (TaxPayer p : persons) {
-			sum += p.tax();
-			System.out.println(p);
+		for (TaxPayer tp : persons) {
+			sum += tp.tax();
 		}
 		System.out.println();
 		System.out.printf("TOTAL TAXES: $ %.2f%n", sum);
